@@ -31,8 +31,7 @@
                     <ul class="nav-menu">
                         <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="#contact" class="btn-nav">Contact</a></li>
                     </ul>
                 </div>
@@ -56,7 +55,7 @@
                 <p class="hero-subtitle">Full-service media production and digital marketing company helping brands communicate through powerful visuals, stunning content, and effective digital strategies.</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                    <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Our Work</a>
                 </div>
             </div>
         </div>
@@ -83,32 +82,38 @@
     <!-- What We Stand For -->
     <section class="values">
         <div class="container">
-            <h2 class="section-title">What We Stand For</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-number">01</div>
-                    <h3>Creativity with Purpose</h3>
-                    <p>Every creative decision is made with your business goals in mind. We don't just create beautiful visuals—we create visuals that drive results.</p>
+            <div class="values-layout">
+                <!-- Left Column -->
+                <div class="values-column values-left">
+                    <div class="value-block">
+                        <div class="value-number">01</div>
+                        <h3 class="value-title">CREATIVITY WITH PURPOSE</h3>
+                        <p class="value-text">Every creative decision is made with your business goals in mind. We don't just create beautiful visuals—we create visuals that drive results.</p>
+                    </div>
+                    <div class="value-block">
+                        <div class="value-number">03</div>
+                        <h3 class="value-title">ATTENTION TO DETAIL</h3>
+                        <p class="value-text">From the initial concept to the final delivery, we pay attention to every detail to ensure perfection in every frame and pixel.</p>
+                    </div>
                 </div>
-                <div class="value-card">
-                    <div class="value-number">02</div>
-                    <h3>High Production Quality</h3>
-                    <p>We use professional equipment and industry-standard processes to ensure every project meets the highest quality standards.</p>
+                
+                <!-- Central Image -->
+                <div class="values-center-image">
+                    <img src="%E2%98%81%EF%B8%8F.jpg" alt="What We Stand For">
                 </div>
-                <div class="value-card">
-                    <div class="value-number">03</div>
-                    <h3>Attention to Detail</h3>
-                    <p>From the initial concept to the final delivery, we pay attention to every detail to ensure perfection in every frame and pixel.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-number">04</div>
-                    <h3>Fast Delivery</h3>
-                    <p>We understand time is valuable. Our streamlined workflow ensures timely delivery without compromising on quality.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-number">05</div>
-                    <h3>Customer-Centric Work</h3>
-                    <p>Your vision is our priority. We work closely with you throughout the process to ensure the final product exceeds your expectations.</p>
+                
+                <!-- Right Column -->
+                <div class="values-column values-right">
+                    <div class="value-block">
+                        <div class="value-number">02</div>
+                        <h3 class="value-title">HIGH PRODUCTION QUALITY</h3>
+                        <p class="value-text">We use professional equipment and industry-standard processes to ensure every project meets the highest quality standards.</p>
+                    </div>
+                    <div class="value-block">
+                        <div class="value-number">04</div>
+                        <h3 class="value-title">FAST DELIVERY</h3>
+                        <p class="value-text">We understand time is valuable. Our streamlined workflow ensures timely delivery without compromising on quality.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -311,7 +316,7 @@
                 <div class="container">
                     <div class="service-content">
                         <div class="service-image">
-                            <div class="service-placeholder">Photography</div>
+                            <img src="download%20(1).jpg" alt="Showcase your brand with high-quality photography - Photography Services">
                         </div>
                         <div class="service-text">
                             <span class="service-label">Photography Services</span>
@@ -359,7 +364,7 @@
                             <a href="#contact" class="btn btn-primary">Start Marketing</a>
                         </div>
                         <div class="service-image">
-                            <div class="service-placeholder">Digital Marketing</div>
+                            <img src="download%20(2).jpg" alt="Grow your brand with powerful marketing strategies - Digital Marketing">
                         </div>
                     </div>
                 </div>
@@ -370,7 +375,7 @@
                 <div class="container">
                     <div class="service-content">
                         <div class="service-image">
-                            <div class="service-placeholder">Web Development</div>
+                            <img src="Coding%E2%9D%A4%EF%B8%8F_%F0%9F%94%A5.jpg" alt="We design stunning websites that are fast, responsive, and conversion-focused - Website Development">
                         </div>
                         <div class="service-text">
                             <span class="service-label">Website Development</span>
@@ -423,208 +428,7 @@
                             <a href="#contact" class="btn btn-primary">Design Your Brand</a>
                         </div>
                         <div class="service-image">
-                            <div class="service-placeholder">Branding</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-page">
-        <div class="container">
-            <h2 class="section-title">Our Portfolio</h2>
-            
-            <!-- Portfolio Filter -->
-            <section class="portfolio-filter">
-                <div class="container">
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">All Work</button>
-                        <button class="filter-btn" data-filter="product-shoots">Product Shoots</button>
-                        <button class="filter-btn" data-filter="brand-videos">Brand Videos</button>
-                        <button class="filter-btn" data-filter="reels-ads">Reels & Ads</button>
-                        <button class="filter-btn" data-filter="websites">Websites</button>
-                        <button class="filter-btn" data-filter="campaigns">Campaigns</button>
-                        <button class="filter-btn" data-filter="events">Event Coverage</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Portfolio Grid -->
-            <section class="portfolio-grid-section">
-                <div class="container">
-                    <div class="portfolio-grid">
-                        <!-- Product Shoots -->
-                        <div class="portfolio-item" data-category="product-shoots">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Product Photography</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Product Photography</h3>
-                                    <p>E-commerce product shoot</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="product-shoots">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Fashion Shoot</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Fashion Photography</h3>
-                                    <p>Brand campaign shoot</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="product-shoots">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Food Photography</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Food Photography</h3>
-                                    <p>Restaurant branding</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Brand Videos -->
-                        <div class="portfolio-item" data-category="brand-videos">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Brand Film</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Brand Film</h3>
-                                    <p>Corporate brand story</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="brand-videos">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Corporate Video</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Corporate Video</h3>
-                                    <p>Company introduction</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="brand-videos">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Promotional Ad</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Promotional Ad</h3>
-                                    <p>Product launch campaign</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Reels & Ads -->
-                        <div class="portfolio-item" data-category="reels-ads">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Social Media Reel</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Social Media Reel</h3>
-                                    <p>Instagram content</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="reels-ads">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Facebook Ad</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Facebook Ad Campaign</h3>
-                                    <p>Lead generation</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="reels-ads">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">YouTube Ad</div>
-                                <div class="portfolio-overlay">
-                                    <h3>YouTube Ad</h3>
-                                    <p>Brand awareness</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Websites -->
-                        <div class="portfolio-item" data-category="websites">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">E-commerce Website</div>
-                                <div class="portfolio-overlay">
-                                    <h3>E-commerce Website</h3>
-                                    <p>Online store development</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="websites">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Business Website</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Business Website</h3>
-                                    <p>Corporate website design</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="websites">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Portfolio Website</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Portfolio Website</h3>
-                                    <p>Creative portfolio site</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Campaigns -->
-                        <div class="portfolio-item" data-category="campaigns">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Digital Campaign</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Digital Marketing Campaign</h3>
-                                    <p>Multi-platform strategy</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="campaigns">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Brand Campaign</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Brand Campaign</h3>
-                                    <p>Integrated marketing</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Events -->
-                        <div class="portfolio-item" data-category="events">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Event Coverage</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Event Coverage</h3>
-                                    <p>Corporate event photography</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-category="events">
-                            <div class="portfolio-image">
-                                <div class="portfolio-placeholder">Concert Coverage</div>
-                                <div class="portfolio-overlay">
-                                    <h3>Concert Coverage</h3>
-                                    <p>Music event videography</p>
-                                    <a href="#" class="portfolio-link">View Project</a>
-                                </div>
-                            </div>
+                            <img src="digital%20marketing%20agency.jpg" alt="Build a strong brand presence with creative designs - Branding & Design">
                         </div>
                     </div>
                 </div>
@@ -636,40 +440,6 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p>We're here to help bring your vision to life. Reach out to us through any of the following channels.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"></div>
-                            <div class="contact-text">
-                                <h3>Phone / WhatsApp</h3>
-                                <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"></div>
-                            <div class="contact-text">
-                                <h3>Email</h3>
-                                <p><a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"></div>
-                            <div class="contact-text">
-                                <h3>Address</h3>
-                                <p>Your Office Address<br>City, State, ZIP Code</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-hours">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
-                    </div>
-                </div>
-
                 <div class="contact-form-wrapper">
                     <h2>Send Us a Message</h2>
                     <form class="contact-form" id="contactForm">
@@ -762,9 +532,27 @@
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <ul class="footer-contact">
-                        <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
-                        <li><a href="mailto:info@yourcompany.com">info@yourcompany.com</a></li>
-                        <li>Your Office Address</li>
+                        <li>
+                            <div class="footer-contact-icon"></div>
+                            <div class="footer-contact-text">
+                                <h5>Phone / WhatsApp</h5>
+                                <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="footer-contact-icon"></div>
+                            <div class="footer-contact-text">
+                                <h5>Email</h5>
+                                <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="footer-contact-icon"></div>
+                            <div class="footer-contact-text">
+                                <h5>Address</h5>
+                                <p>Your Office Address<br>City, State, ZIP Code</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

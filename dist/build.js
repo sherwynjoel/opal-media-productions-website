@@ -12,7 +12,6 @@ fs.mkdirSync(distDir, { recursive: true });
 const filesToCopy = [
     'index.html',
     'about.html',
-    'services.html',
     'portfolio.html',
     'contact.html',
     'styles.css',
