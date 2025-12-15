@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (whyChooseUsSection) {
         const sectionTitle = whyChooseUsSection.querySelector('.section-title');
         if (sectionTitle) {
-            // Title starts hidden, observe for animation
+            sectionTitle.classList.add('animate-pending');
             scrollAnimationObserver.observe(sectionTitle);
         }
         
@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Observe all feature items
         featureItems.forEach((item) => {
+            item.classList.add('animate-pending');
             whyChooseUsObserver.observe(item);
         });
         

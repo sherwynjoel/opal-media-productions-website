@@ -715,17 +715,19 @@ section {
 
 /* Why Choose Us */
 .why-choose-us {
-    background: var(--white);
+    background: #000000;
+    color: #ffffff;
     padding: var(--spacing-xl) 0;
 }
 
 .why-choose-us .section-title {
+    color: #ffffff;
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.why-choose-us .section-title:not(.animate-in) {
+.why-choose-us .section-title.animate-pending {
     opacity: 0;
     transform: translateY(30px);
 }
@@ -743,21 +745,24 @@ section {
 }
 
 .feature-item {
-    background: var(--off-white);
+    background: rgba(255, 255, 255, 0.03);
     padding: var(--spacing-md);
     border-radius: 0;
-    border-left: 2px solid var(--black);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Feature items - start hidden for animation */
+/* Feature items - visible by default, animated via JS */
 .why-choose-us .feature-item {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.why-choose-us .feature-item.animate-pending {
     opacity: 0;
     transform: translateX(0) translateY(30px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Visible when animated in */
 .why-choose-us .feature-item.animate-in {
     opacity: 1;
     transform: translateX(0) translateY(0);
@@ -774,11 +779,11 @@ section {
 .feature-item:hover {
     transform: translateX(5px) translateY(0);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-left-color: var(--gray);
+    border-left-color: rgba(255, 255, 255, 0.5);
 }
 
 .feature-item h3 {
-    color: var(--black);
+    color: #ffffff;
     font-size: 1.125rem;
     margin-bottom: var(--spacing-xs);
     font-weight: 500;
@@ -786,11 +791,11 @@ section {
 }
 
 .feature-item:hover h3 {
-    color: var(--black);
+    color: #ffffff;
 }
 
 .feature-item p {
-    color: var(--gray);
+    color: #d0d0d0;
     font-size: 0.95rem;
     font-weight: 400;
     transition: color 0.3s ease;

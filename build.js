@@ -25,8 +25,13 @@ const imagesToCopy = [
     'Photography Pricing Guide – How Much Should Photographers Make (Updated for 2024).jpg',
     'Screenshot 2025-12-12 234332.png',
     'download.jpg',
+    'download (1).jpg',
+    'download (2).jpg',
     'Elite Team of Software Engineers_ Leading Edge tech in Web2 and Web3_.jpg',
-    'Behind the scenes of the #21Icons Season II series.jpg'
+    'Behind the scenes of the #21Icons Season II series.jpg',
+    'Coding❤️_🔥.jpg',
+    'digital marketing agency.jpg',
+    '☁️.jpg'
 ];
 
 // Copy files
