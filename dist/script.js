@@ -217,70 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, index * 100);
     });
     
-    // Section titles
-    const sectionTitles = document.querySelectorAll('.section-title');
-    sectionTitles.forEach(title => {
-        title.classList.add('fade-in-up');
-        scrollAnimationObserver.observe(title);
-    });
-    
-    // Feature items with stagger - Why Choose Us section
-    const whyChooseUsSection = document.querySelector('.why-choose-us');
-    if (whyChooseUsSection) {
-        const sectionTitle = whyChooseUsSection.querySelector('.section-title');
-        if (sectionTitle) {
-            sectionTitle.classList.add('animate-pending');
-            scrollAnimationObserver.observe(sectionTitle);
-        }
-        
-        const featureItems = whyChooseUsSection.querySelectorAll('.feature-item');
-        
-        // Create a custom observer with stagger effect for Why Choose Us items
-        const whyChooseUsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('animate-in')) {
-                    // Get index for stagger delay
-                    const index = Array.from(featureItems).indexOf(entry.target);
-                    setTimeout(() => {
-                        entry.target.classList.add('animate-in');
-                    }, index * 100);
-                    whyChooseUsObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
-        
-        // Observe all feature items
-        featureItems.forEach((item) => {
-            item.classList.add('animate-pending');
-            whyChooseUsObserver.observe(item);
-        });
-        
-        // Fallback: if items are already in viewport on load, animate them
-        setTimeout(() => {
-            featureItems.forEach((item, index) => {
-                const rect = item.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                if (isVisible && !item.classList.contains('animate-in')) {
-                    setTimeout(() => {
-                        item.classList.add('animate-in');
-                    }, index * 100);
-                }
-            });
-        }, 100);
-    }
-    
-    // Other feature items (if any outside Why Choose Us)
-    const otherFeatureItems = document.querySelectorAll('.feature-item:not(.why-choose-us .feature-item)');
-    otherFeatureItems.forEach((item, index) => {
-        item.classList.add('fade-in-up');
-        setTimeout(() => {
-            scrollAnimationObserver.observe(item);
-        }, index * 50);
-    });
-    
+    // Disable animations for section titles and feature items to ensure visibility on deployment
     // Value cards with stagger
     const valueCards = document.querySelectorAll('.value-card');
     valueCards.forEach((card, index) => {
@@ -514,8 +451,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1500);
     }
     
-    // Other elements - without stagger
-    const animateElements = document.querySelectorAll('.feature-item, .value-card, .portfolio-item, .service-content');
+    // Other elements - without stagger (exclude feature-item to avoid hiding Why Choose Us)
+    const animateElements = document.querySelectorAll('.value-card, .portfolio-item, .service-content');
     animateElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(30px)';
