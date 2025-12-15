@@ -1728,10 +1728,6 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .service-image {
-        order: -1;
-    }
-    
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
