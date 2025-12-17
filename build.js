@@ -13,6 +13,7 @@ const filesToCopy = [
 
 // Images to copy
 const imagesToCopy = [
+    // Core assets
     'logo.png',
     'download (1).jpg',
     'download (2).jpg',
@@ -24,7 +25,16 @@ const imagesToCopy = [
     'CreativeLive Company Update.jpg',
     'Elite Team of Software Engineers_ Leading Edge tech in Web2 and Web3_.jpg',
     'Photography Pricing Guide – How Much Should Photographers Make (Updated for 2024).jpg',
-    'Screenshot 2025-12-12 234332.png'
+    'Screenshot 2025-12-12 234332.png',
+
+    // Client logos - Stories We've Told With
+    'Toyota-logo-icon-on-transparent--PNG-removebg-preview.png',
+    '366-3666957_škoda-logo-skoda-logo-removebg-preview.png',
+    'LandRover.svg-removebg-preview.png',
+    'image_2025-12-17_120701437-removebg-preview.png', // Cars Catalyst
+    'image_2025-12-17_121320864-removebg-preview.png', // JAP Jshya Apparels
+    'image_2025-12-17_121433090-removebg-preview.png', // London Castle
+    'image_2025-12-17_121703617-removebg-preview.png'  // BMW
 ];
 
 // Create dist directory if it doesn't exist
