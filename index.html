@@ -5,38 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Full-service media production and digital marketing company. We create, capture, and inspire through powerful visuals and effective digital strategies.">
     <meta name="keywords" content="media production, digital marketing, photography, videography, branding, web development, e-commerce">
-    <title>Home - Media Production & Digital Marketing Agency</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wolfstride.in/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OPAL - Media Production & Digital Marketing Agency">
+    <meta property="og:description" content="Full-service media production and digital marketing company. We create, capture, and inspire through powerful visuals and effective digital strategies.">
+    <meta property="og:url" content="https://wolfstride.in/">
+    <meta property="og:image" content="https://wolfstride.in/CreativeLive%20Company%20Update.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OPAL - Media Production & Digital Marketing Agency">
+    <meta name="twitter:description" content="Full-service media production and digital marketing company. We create, capture, and inspire through powerful visuals and effective digital strategies.">
+    <meta name="twitter:image" content="https://wolfstride.in/CreativeLive%20Company%20Update.jpg">
+    <meta name="theme-color" content="#000000">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OPAL",
+      "url": "https://wolfstride.in/",
+      "description": "Full-service media production and digital marketing agency creating impactful visuals and digital solutions.",
+      "sameAs": []
+    }
+    </script>
+    <title>OPAL - Media Production & Digital Marketing Agency</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html" class="logo">OPAL</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html" class="btn-nav">Contact</a></li>
-                </ul>
+                <a href="#home" class="logo-image" onclick="event.preventDefault(); document.getElementById('home').scrollIntoView({behavior: 'smooth', block: 'start'});">
+                    <img src="logo.png" alt="OPAL Media Productions">
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="#contact" class="btn-nav">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
+    <section id="home" class="hero">
+        <div class="hero-background-pattern">
+            <div class="hero-grid-pattern"></div>
+            <div class="hero-radial-gradient"></div>
         </div>
         <div class="container">
             <div class="hero-content">
@@ -47,14 +71,10 @@
                 </h1>
                 <p class="hero-subtitle">Full-service media production and digital marketing company helping brands communicate through powerful visuals, stunning content, and effective digital strategies.</p>
                 <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="#contact" class="btn btn-primary">Start Your Project</a>
                     <a href="portfolio.html" class="btn btn-secondary">View Our Work</a>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
         </div>
     </section>
 
@@ -65,40 +85,158 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about-content">
+        <div class="container">
+            <div class="about-intro">
+                <h2 class="section-title">About Us</h2>
+                <h3>We are a team of passionate creators, filmmakers, designers, and marketers dedicated to helping businesses grow through high-quality visuals and modern digital solutions.</h3>
+                <p>With years of experience in media production and digital branding, we focus on delivering creativity, quality, and measurable results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Stand For -->
+    <section class="values">
+        <div class="container">
+            <div class="values-layout">
+                <!-- Left Column -->
+                <div class="values-column values-left">
+                    <div class="value-block">
+                        <div class="value-number">01</div>
+                        <h3 class="value-title">CREATIVITY WITH PURPOSE</h3>
+                        <p class="value-text">Every creative decision is made with your business goals in mind. We don't just create beautiful visuals—we create visuals that drive results.</p>
+                    </div>
+                    <div class="value-block">
+                        <div class="value-number">03</div>
+                        <h3 class="value-title">ATTENTION TO DETAIL</h3>
+                        <p class="value-text">From the initial concept to the final delivery, we pay attention to every detail to ensure perfection in every frame and pixel.</p>
+                    </div>
+                </div>
+                
+                <!-- Central Image -->
+                <div class="values-center-image">
+                    <img src="%E2%98%81%EF%B8%8F.jpg" alt="What We Stand For">
+                </div>
+                
+                <!-- Right Column -->
+                <div class="values-column values-right">
+                    <div class="value-block">
+                        <div class="value-number">02</div>
+                        <h3 class="value-title">HIGH PRODUCTION QUALITY</h3>
+                        <p class="value-text">We use professional equipment and industry-standard processes to ensure every project meets the highest quality standards.</p>
+                    </div>
+                    <div class="value-block">
+                        <div class="value-number">04</div>
+                        <h3 class="value-title">FAST DELIVERY</h3>
+                        <p class="value-text">We understand time is valuable. Our streamlined workflow ensures timely delivery without compromising on quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p class="mission-statement">To help brands look professional, grow online, and build long-lasting customer trust.</p>
+                <p>We believe that every brand has a unique story to tell. Our mission is to help you tell that story in the most compelling way possible—through stunning visuals, strategic marketing, and digital solutions that work.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Core Expertise -->
     <section class="expertise">
+        <div class="expertise-parallax-bg"></div>
         <div class="container">
             <h2 class="section-title">Our Core Expertise</h2>
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <div class="expertise-icon">🎥</div>
-                    <h3>Media Production</h3>
-                    <p>Cinematic visuals that bring your story to life</p>
+                    <div class="expertise-card-content">
+                        <div class="expertise-card-text">
+                            <div class="expertise-title-line"></div>
+                            <h3 class="expertise-card-title">MEDIA PRODUCTION</h3>
+                            <p class="expertise-card-description">We transform your vision into compelling visual narratives through professional video production. Our team specializes in creating cinematic content that captures attention and drives engagement. This approach has led to increased brand awareness, higher engagement rates, and measurable ROI for our clients.</p>
+                            <div class="expertise-card-tags">
+                                <span class="expertise-tag">Video Production<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Corporate & Commercial</span></span>
+                                <span class="expertise-tag">Brand Films<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Storytelling & Narrative</span></span>
+                                <span class="expertise-tag">Post-Production<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Editing & VFX</span></span>
+                            </div>
+                        </div>
+                        <div class="expertise-card-image">
+                            <img src="CreativeLive%20Company%20Update.jpg" alt="CreativeLive Company Update - Media Production">
+                        </div>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">📸</div>
-                    <h3>Photography & Videography</h3>
-                    <p>Professional shoots that capture every moment</p>
+                    <div class="expertise-card-content">
+                        <div class="expertise-card-text">
+                            <div class="expertise-title-line"></div>
+                            <h3 class="expertise-card-title">PHOTOGRAPHY & VIDEOGRAPHY</h3>
+                            <p class="expertise-card-description">Our photography and videography services capture the essence of your brand through stunning visuals. We specialize in creating high-quality imagery that tells your story and connects with your audience. This commitment to excellence has resulted in increased conversion rates, enhanced brand perception, and lasting visual assets for our clients.</p>
+                            <div class="expertise-card-tags">
+                                <span class="expertise-tag">Product Photography<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">E-commerce & Catalog</span></span>
+                                <span class="expertise-tag">Event Coverage<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Corporate & Social</span></span>
+                                <span class="expertise-tag">Commercial<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Fashion & Lifestyle</span></span>
+                            </div>
+                        </div>
+                        <div class="expertise-card-image">
+                            <img src="Photography%20Pricing%20Guide%20–%20How%20Much%20Should%20Photographers%20Make%20(Updated%20for%202024).jpg" alt="Photography Pricing Guide - Photography & Videography">
+                        </div>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">📱</div>
-                    <h3>Digital Marketing</h3>
-                    <p>Strategies that drive growth and engagement</p>
+                    <div class="expertise-card-content">
+                        <div class="expertise-card-text">
+                            <div class="expertise-title-line"></div>
+                            <h3 class="expertise-card-title">DIGITAL MARKETING</h3>
+                            <p class="expertise-card-description">We develop comprehensive digital marketing strategies that drive measurable results and sustainable growth for your business. Our data-driven approach combines social media management, search engine optimization, and targeted paid advertising to maximize your online presence and ROI. This strategic approach has enabled our clients to achieve significant increases in website traffic, lead generation, and overall brand visibility.</p>
+                            <div class="expertise-card-tags">
+                                <span class="expertise-tag">Social Media<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Content & Engagement</span></span>
+                                <span class="expertise-tag">SEO<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Search Optimization</span></span>
+                                <span class="expertise-tag">Paid Ads<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Targeted Campaigns</span></span>
+                            </div>
+                        </div>
+                        <div class="expertise-card-image">
+                            <img src="Screenshot%202025-12-12%20234332.png" alt="Digital Marketing">
+                        </div>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">🎨</div>
-                    <h3>Branding & Designing</h3>
-                    <p>Visual identity that makes you stand out</p>
+                    <div class="expertise-card-content">
+                        <div class="expertise-card-text">
+                            <div class="expertise-title-line"></div>
+                            <h3 class="expertise-card-title">BRANDING & DESIGNING</h3>
+                            <p class="expertise-card-description">We craft distinctive brand identities that resonate with your audience and set you apart from the competition. Our design process combines strategic thinking with creative excellence to develop comprehensive visual systems that communicate your brand's values and personality. This holistic approach has helped our clients establish stronger market presence, improve brand recognition, and build lasting customer relationships.</p>
+                            <div class="expertise-card-tags">
+                                <span class="expertise-tag">Brand Identity<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Complete Systems</span></span>
+                                <span class="expertise-tag">Logo Design<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Memorable Marks</span></span>
+                                <span class="expertise-tag">Visual Design<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Creative Solutions</span></span>
+                            </div>
+                        </div>
+                        <div class="expertise-card-image">
+                            <img src="download.jpg" alt="Branding & Designing">
+                        </div>
+                    </div>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon">🌐</div>
-                    <h3>Website & App Development</h3>
-                    <p>Digital solutions built for success</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon">🛒</div>
-                    <h3>E-commerce Solutions</h3>
-                    <p>Online stores that convert visitors to customers</p>
+                    <div class="expertise-card-content">
+                        <div class="expertise-card-text">
+                            <div class="expertise-title-line"></div>
+                            <h3 class="expertise-card-title">WEBSITE & APP DEVELOPMENT</h3>
+                            <p class="expertise-card-description">We build cutting-edge web and mobile applications that combine beautiful design with powerful functionality. Our development process focuses on creating fast, responsive, and intuitive digital experiences that engage users and drive conversions. This comprehensive approach has resulted in improved user engagement, increased conversion rates, and enhanced operational efficiency for businesses.</p>
+                            <div class="expertise-card-tags">
+                                <span class="expertise-tag">Web Development<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">Custom Solutions</span></span>
+                                <span class="expertise-tag">Mobile Apps<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">iOS & Android</span></span>
+                                <span class="expertise-tag">UI/UX Design<br><span style="font-size: 0.75rem; font-weight: 400; opacity: 0.8;">User Experience</span></span>
+                            </div>
+                        </div>
+                        <div class="expertise-card-image">
+                            <img src="Elite%20Team%20of%20Software%20Engineers_%20Leading%20Edge%20tech%20in%20Web2%20and%20Web3_.jpg" alt="Elite Team of Software Engineers - Website & App Development">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +248,7 @@
             <div class="cta-content">
                 <h2>Let's create something extraordinary.</h2>
                 <p>Ready to elevate your brand? Get in touch and let's discuss your project.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Get Started Today</a>
+                <a href="#contact" class="btn btn-primary btn-large">Get Started Today</a>
             </div>
         </div>
     </section>
@@ -152,42 +290,300 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services-page">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            
+            <!-- Media Production -->
+            <section id="media-production" class="service-section">
+                <div class="container">
+                    <div class="service-content">
+                        <div class="service-text">
+                            <span class="service-label">Media Production</span>
+                            <h2>We bring concepts to life through cinematic visuals.</h2>
+                            <p>From concept to final cut, we handle every aspect of video production with professional equipment and creative expertise.</p>
+                            <div class="service-features">
+                                <h3>Our Production Services:</h3>
+                                <ul class="service-list">
+                                    <li>Corporate Videos</li>
+                                    <li>Brand Films</li>
+                                    <li>Promotional Ads</li>
+                                    <li>Product Shoots</li>
+                                    <li>Music Videos</li>
+                                    <li>Event Coverage</li>
+                                    <li>Social Media Reels</li>
+                                    <li>Short Films & Documentaries</li>
+                                    <li>Drone Videography</li>
+                                    <li>Video Editing, Color Grading & VFX</li>
+                                </ul>
+                            </div>
+                            <p class="service-note">Whether it's a small shoot or a full production, we handle everything from planning to post-production.</p>
+                            <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="Behind%20the%20scenes%20of%20the%20%2321Icons%20Season%20II%20series.jpg" alt="Behind the scenes of the #21Icons Season II series - Media Production">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Photography -->
+            <section id="photography" class="service-section service-alt">
+                <div class="container">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="download%20(1).jpg" alt="Showcase your brand with high-quality photography - Photography Services">
+                        </div>
+                        <div class="service-text">
+                            <span class="service-label">Photography Services</span>
+                            <h2>Showcase your brand with high-quality photography.</h2>
+                            <p>Every frame we capture tells a story. Our photography services help you present your brand in the best light.</p>
+                            <div class="service-features">
+                                <h3>We Specialize In:</h3>
+                                <ul class="service-list">
+                                    <li>Product Photography</li>
+                                    <li>Fashion & Model Shoots</li>
+                                    <li>Event Photography</li>
+                                    <li>Food Photography</li>
+                                    <li>Portfolio Shoots</li>
+                                    <li>Real Estate Photography</li>
+                                    <li>Lifestyle Photography</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary">Book a Shoot</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Digital Marketing -->
+            <section id="digital-marketing" class="service-section">
+                <div class="container">
+                    <div class="service-content">
+                        <div class="service-text">
+                            <span class="service-label">Digital Marketing</span>
+                            <h2>Grow your brand with powerful marketing strategies.</h2>
+                            <p>We help you reach the right audience at the right time with data-driven marketing campaigns that deliver results.</p>
+                            <div class="service-features">
+                                <h3>Our Digital Solutions:</h3>
+                                <ul class="service-list">
+                                    <li>Instagram & Facebook Ads</li>
+                                    <li>Google Ads</li>
+                                    <li>Social Media Management</li>
+                                    <li>SEO (Search Engine Optimization)</li>
+                                    <li>Content Creation</li>
+                                    <li>Influencer Marketing</li>
+                                    <li>Lead Generation Campaigns</li>
+                                    <li>Brand Awareness Campaigns</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary">Start Marketing</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="download%20(2).jpg" alt="Grow your brand with powerful marketing strategies - Digital Marketing">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Website Development -->
+            <section id="web-development" class="service-section service-alt">
+                <div class="container">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="Coding%E2%9D%A4%EF%B8%8F_%F0%9F%94%A5.jpg" alt="We design stunning websites that are fast, responsive, and conversion-focused - Website Development">
+                        </div>
+                        <div class="service-text">
+                            <span class="service-label">Website Development</span>
+                            <h2>We design stunning websites that are fast, responsive, and conversion-focused.</h2>
+                            <p>Your digital identity starts here. We create websites that not only look great but also perform exceptionally.</p>
+                            <div class="service-features">
+                                <h3>Types of Websites:</h3>
+                                <ul class="service-list">
+                                    <li>Business Websites</li>
+                                    <li>Portfolio Websites</li>
+                                    <li>E-commerce Websites</li>
+                                    <li>Landing Pages</li>
+                                    <li>Web Applications</li>
+                                    <li>Shopify & WordPress Websites</li>
+                                </ul>
+                                <h3>Features:</h3>
+                                <ul class="service-list">
+                                    <li>Mobile-Friendly</li>
+                                    <li>SEO Ready</li>
+                                    <li>Clean UI/UX</li>
+                                    <li>High Performance</li>
+                                    <li>Secure & Scalable</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary">Build Your Website</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Branding & Design -->
+            <section id="branding" class="service-section">
+                <div class="container">
+                    <div class="service-content">
+                        <div class="service-text">
+                            <span class="service-label">Branding & Design</span>
+                            <h2>Build a strong brand presence with creative designs.</h2>
+                            <p>We help your brand stand out with a unique visual identity that resonates with your audience.</p>
+                            <div class="service-features">
+                                <h3>We Offer:</h3>
+                                <ul class="service-list">
+                                    <li>Logo Design</li>
+                                    <li>Brand Identity</li>
+                                    <li>Social Media Creative Design</li>
+                                    <li>Brochures, Posters & Flyers</li>
+                                    <li>Packaging Design</li>
+                                    <li>Business Cards</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary">Design Your Brand</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="digital%20marketing%20agency.jpg" alt="Build a strong brand presence with creative designs - Branding & Design">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 93608 67866">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Required Service <span class="required">*</span></label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="media-production">Media Production</option>
+                                <option value="photography">Photography</option>
+                                <option value="videography">Videography</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="web-development">Website Development</option>
+                                <option value="app-development">App Development</option>
+                                <option value="branding">Branding & Design</option>
+                                <option value="ecommerce">E-commerce Solutions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                        <p class="form-note">We'll get back to you within 24 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Get In Touch Section -->
+    <section class="get-in-touch">
+        <div class="get-in-touch-spotlight"></div>
+        <div class="get-in-touch-floor"></div>
+        <div class="container">
+            <div class="get-in-touch-content">
+                <div class="get-in-touch-line"></div>
+                <h2 class="get-in-touch-title">
+                    <span class="get-in-touch-line1">LET'S GET</span>
+                    <span class="get-in-touch-line2">IN TOUCH</span>
+                </h2>
+                <div class="get-in-touch-icons">
+                    <a href="#" class="contact-icon-link" aria-label="LinkedIn">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/919360867866" class="contact-icon-link" aria-label="WhatsApp" target="_blank">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="mailto:graham24james@gmail.com" class="contact-icon-link" aria-label="Email">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-logo">OPAL</h3>
+                    <a href="#home" class="footer-logo-image" onclick="event.preventDefault(); document.getElementById('home').scrollIntoView({behavior: 'smooth', block: 'start'});">
+                        <img src="logo.png" alt="OPAL Media Productions">
+                    </a>
                     <p>We Create. We Capture. We Inspire.</p>
                     <p class="footer-tagline">Full-service media production and digital marketing company helping brands communicate through powerful visuals and effective digital strategies.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html#media-production">Media Production</a></li>
-                        <li><a href="services.html#photography">Photography</a></li>
-                        <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
-                        <li><a href="services.html#web-development">Web Development</a></li>
-                        <li><a href="services.html#branding">Branding & Design</a></li>
-                        <li><a href="services.html#ecommerce">E-commerce Solutions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
                     <h4>Contact</h4>
                     <ul class="footer-contact">
-                        <li>📞 <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
-                        <li>✉️ <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></li>
-                        <li>📍 Your Office Address</li>
+                        <li>
+                            <div class="footer-contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-text">
+                                <h5>Phone / WhatsApp</h5>
+                                <a href="tel:+919360867866">+91 93608 67866</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="footer-contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-text">
+                                <h5>Email</h5>
+                                <a href="mailto:graham24james@gmail.com">graham24james@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="footer-contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="footer-contact-text">
+                                <h5>Address</h5>
+                                <p><strong>Head Office:</strong><br>160C/20, Kurinji Nagar, 5th street, Tuticorin - 628002<br><br><strong>Branch Office:</strong><br>YMCA Building, Variety Hall Road, Coimbatore - 641001</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

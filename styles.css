@@ -181,6 +181,22 @@ a {
     letter-spacing: -0.02em;
 }
 
+.logo-image {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.logo-image:hover img {
+    opacity: 0.8;
+}
+
 
 .nav-menu {
     display: flex;
@@ -1226,8 +1242,28 @@ section {
 }
 
 .contact-icon {
-    font-size: 1.25rem;
+    width: 50px;
+    height: 50px;
+    background: var(--off-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+    color: var(--black);
+    transition: var(--transition);
+}
+
+.contact-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-item:hover .contact-icon {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
 }
 
 .contact-text h3 {
@@ -1471,10 +1507,27 @@ section {
 .footer-logo {
     font-family: var(--font-primary);
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--black);
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.02em;
+}
+
+.footer-logo-image {
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+    transition: var(--transition);
+}
+
+.footer-logo-image img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.footer-logo-image:hover img {
+    opacity: 0.8;
 }
 
 .footer-section p {
@@ -1539,11 +1592,18 @@ section {
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    color: var(--gray);
+}
+
+.footer-contact-icon svg {
+    width: 18px;
+    height: 18px;
 }
 
 .footer-contact li:hover .footer-contact-icon {
     border-color: rgba(255, 255, 255, 0.4);
     background: rgba(255, 255, 255, 0.05);
+    color: var(--black);
 }
 
 .footer-contact-text {
@@ -1797,6 +1857,14 @@ section {
         font-size: 1.25rem;
     }
     
+    .logo-image {
+        margin-right: var(--spacing-sm);
+    }
+    
+    .logo-image img {
+        height: 60px;
+    }
+    
     .nav-menu {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -1987,6 +2055,10 @@ section {
     .footer-content {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
+    }
+    
+    .footer-logo-image img {
+        height: 50px;
     }
     
     .section-title {

@@ -102,7 +102,7 @@ updateScrollProgress();
 
 // Parallax Scrolling Effect for Expertise Section
 let lastScrollTop = 0;
-let ticking = false;
+let parallaxTicking = false;
 
 function updateParallax() {
     const expertiseSection = document.querySelector('.expertise');
@@ -136,13 +136,13 @@ function updateParallax() {
         }
     }
     
-    ticking = false;
+    parallaxTicking = false;
 }
 
 window.addEventListener('scroll', function() {
-    if (!ticking) {
+    if (!parallaxTicking) {
         window.requestAnimationFrame(updateParallax);
-        ticking = true;
+        parallaxTicking = true;
     }
 }, { passive: true });
 
