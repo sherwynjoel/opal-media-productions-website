@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const href = this.getAttribute('href');
             
             // Only handle anchor links
-            if (href.startsWith('#')) {
+            if (href && href.startsWith('#')) {
                 e.preventDefault();
                 
                 const targetId = href.substring(1);
@@ -18,19 +18,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (targetSection) {
                     // Smooth scroll to section
-                    const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                    const navbarHeight = 80;
+                    const offsetTop = targetSection.offsetTop - navbarHeight;
+                    
                     window.scrollTo({
-                        top: offsetTop,
+                        top: Math.max(0, offsetTop),
                         behavior: 'smooth'
                     });
                     
                     // Update active nav link
                     navLinks.forEach(l => l.classList.remove('active'));
                     this.classList.add('active');
+                } else {
+                    console.warn('Target section not found:', targetId);
                 }
             }
         });
     });
+    
+    // Also handle contact button specifically
+    const contactBtn = document.querySelector('.btn-nav[href="#contact"]');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                const navbarHeight = 80;
+                const offsetTop = contactSection.offsetTop - navbarHeight;
+                window.scrollTo({
+                    top: Math.max(0, offsetTop),
+                    behavior: 'smooth'
+                });
+                
+                // Update active nav link
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    }
 });
 
 // Enhanced Navbar Scroll Effect with Smooth Transition
@@ -47,12 +72,8 @@ function updateNavbar() {
         navbar.classList.remove('scrolled');
     }
     
-    // Hide/show navbar on scroll (optional - can be removed if not needed)
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
+    // Keep navbar visible - removed hide/show on scroll
+    navbar.style.transform = 'translateY(0)';
     
     // Update active nav link based on scroll position
     const sections = ['home', 'about', 'services', 'portfolio', 'contact'];
@@ -471,6 +492,55 @@ document.addEventListener('DOMContentLoaded', function() {
         if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
             link.classList.add('active');
         }
+    });
+});
+
+// Achievement Counter Animation
+function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16); // 60fps
+    let current = start;
+    const isAnimated = element.hasAttribute('data-animated');
+    
+    if (isAnimated) return; // Don't animate if already animated
+    
+    element.setAttribute('data-animated', 'true');
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+    }, 16);
+}
+
+// Intersection Observer for Achievement Counter
+const achievementObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const numberElement = entry.target;
+            const target = parseInt(numberElement.getAttribute('data-target'));
+            
+            if (target && !numberElement.hasAttribute('data-animated')) {
+                animateCounter(numberElement, target, 2000);
+            }
+            
+            achievementObserver.unobserve(numberElement);
+        }
+    });
+}, {
+    threshold: 0.5,
+    rootMargin: '0px'
+});
+
+// Initialize Achievement Counter
+document.addEventListener('DOMContentLoaded', function() {
+    const achievementNumbers = document.querySelectorAll('.achievement-number .number');
+    
+    achievementNumbers.forEach(number => {
+        achievementObserver.observe(number);
     });
 });
 

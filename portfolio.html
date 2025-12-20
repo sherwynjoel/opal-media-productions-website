@@ -5,28 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View our portfolio of media production, photography, videography, web development, and digital marketing projects.">
     <title>Portfolio - OPAL Media Production & Digital Marketing</title>
+    <style>
+        /* Emergency visibility fix */
+        * {
+            visibility: visible !important;
+        }
+        body {
+            background: #000000 !important;
+            color: #ffffff !important;
+        }
+        .navbar, .hero, section {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Font loading fallback */
+        @font-face {
+            font-family: 'Inter';
+            font-display: swap;
+        }
+    </style>
 </head>
-<body>
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress"></div>
-
+<body style="background: #000000 !important; color: #ffffff !important; opacity: 1 !important; visibility: visible !important;">
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" style="background: #000000 !important; color: #ffffff !important; display: block !important; opacity: 1 !important; visibility: visible !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 1000 !important; padding: 1rem !important;">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html#home" class="logo-image">
-                    <img src="logo.png" alt="OPAL Media Productions">
+                <a href="index.html#home" class="logo-image" onclick="event.preventDefault(); window.location.href='index.html#home';">
+                    <img src="logo.png" alt="OPAL Media Productions" style="height: 50px; width: auto; object-fit: contain;">
                 </a>
                 <div class="nav-right">
                     <ul class="nav-menu">
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#about">About</a></li>
                         <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                        <li><a href="index.html#contact" class="btn-nav">Contact</a></li>
+                        <li><a href="index.html#contact" class="btn-nav" onclick="event.preventDefault(); window.location.href='index.html#contact';" style="color: #000000 !important; background: #ffffff !important; font-weight: 500 !important;">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,63 +67,47 @@
                 <!-- Product Shoots -->
                 <div class="portfolio-item" data-category="product-shoots">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Product Photography</div>
+                        <img src="Product Photography.jpg" alt="Product Photography" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Product Photography</h3>
                             <p>E-commerce product shoot</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="product-shoots">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Fashion Shoot</div>
+                        <img src="Brand campaign shoot.jpg" alt="Brand campaign shoot" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Fashion Photography</h3>
                             <p>Brand campaign shoot</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="product-shoots">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Food Photography</div>
-                        <div class="portfolio-overlay">
-                            <h3>Food Photography</h3>
-                            <p>Restaurant branding</p>
-                            <a href="#" class="portfolio-link">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Brand Videos -->
                 <div class="portfolio-item" data-category="brand-videos">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Brand Film</div>
+                        <img src="Corporate brand story.jpg" alt="Corporate brand story" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Brand Film</h3>
                             <p>Corporate brand story</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="brand-videos">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Corporate Video</div>
+                        <img src="Company introduction.jpg" alt="Company introduction" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Corporate Video</h3>
                             <p>Company introduction</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="brand-videos">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Promotional Ad</div>
+                        <img src="Product launch campaign.jpg" alt="Product launch campaign" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Promotional Ad</h3>
                             <p>Product launch campaign</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -112,85 +115,57 @@
                 <!-- Reels & Ads -->
                 <div class="portfolio-item" data-category="reels-ads">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Social Media Reel</div>
+                        <img src="Instagram content.jpg" alt="Instagram content" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Social Media Reel</h3>
                             <p>Instagram content</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="reels-ads">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Facebook Ad</div>
+                        <img src="Lead generation.jpg" alt="Lead generation" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
-                            <h3>Facebook Ad Campaign</h3>
+                            <h3>Meta Ads</h3>
                             <p>Lead generation</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="reels-ads">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">YouTube Ad</div>
-                        <div class="portfolio-overlay">
-                            <h3>YouTube Ad</h3>
-                            <p>Brand awareness</p>
-                            <a href="#" class="portfolio-link">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Websites -->
                 <div class="portfolio-item" data-category="websites">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">E-commerce Website</div>
+                        <img src="Online store development.jpg" alt="Online store development" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>E-commerce Website</h3>
                             <p>Online store development</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="websites">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Business Website</div>
+                        <img src="Business Website Corporate website design.jpg" alt="Business Website Corporate website design" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Business Website</h3>
                             <p>Corporate website design</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="websites">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Portfolio Website</div>
-                        <div class="portfolio-overlay">
-                            <h3>Portfolio Website</h3>
-                            <p>Creative portfolio site</p>
-                            <a href="#" class="portfolio-link">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Campaigns -->
                 <div class="portfolio-item" data-category="campaigns">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Digital Campaign</div>
+                        <img src="Digital.jpg" alt="Digital Marketing Campaign" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Digital Marketing Campaign</h3>
                             <p>Multi-platform strategy</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="campaigns">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Brand Campaign</div>
+                        <img src="brand.jpg" alt="Brand Campaign" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Brand Campaign</h3>
                             <p>Integrated marketing</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -198,21 +173,19 @@
                 <!-- Events -->
                 <div class="portfolio-item" data-category="events">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Event Coverage</div>
+                        <img src="Event Coverage.jpg" alt="Event Coverage" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Event Coverage</h3>
                             <p>Corporate event photography</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="events">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder">Concert Coverage</div>
+                        <img src="Concert Coverage .jpg" alt="Concert Coverage" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="portfolio-overlay">
                             <h3>Concert Coverage</h3>
                             <p>Music event videography</p>
-                            <a href="#" class="portfolio-link">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -226,7 +199,7 @@
             <div class="cta-content">
                 <h2>Ready to create something amazing?</h2>
                 <p>Let's discuss your project and add it to our portfolio.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Start Your Project</a>
+                <a href="index.html#contact" class="btn btn-primary btn-large" onclick="event.preventDefault(); window.location.href='index.html#contact';">Start Your Project</a>
             </div>
         </div>
     </section>
@@ -236,8 +209,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="index.html#home" class="footer-logo-image">
-                        <img src="logo.png" alt="OPAL Media Productions">
+                    <a href="index.html#home" class="footer-logo-image" onclick="event.preventDefault(); window.location.href='index.html#home';">
+                        <img src="logo.png" alt="OPAL Media Productions" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 1rem;">
                     </a>
                     <p>We Create. We Capture. We Inspire.</p>
                     <p class="footer-tagline">Full-service media production and digital marketing company helping brands communicate through powerful visuals and effective digital strategies.</p>
@@ -253,7 +226,7 @@
                             </div>
                             <div class="footer-contact-text">
                                 <h5>Phone / WhatsApp</h5>
-                                <a href="tel:+919360867866">+91 93608 67866</a>
+                                <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a>
                             </div>
                         </li>
                         <li>
@@ -264,7 +237,7 @@
                             </div>
                             <div class="footer-contact-text">
                                 <h5>Email</h5>
-                                <a href="mailto:graham24james@gmail.com">graham24james@gmail.com</a>
+                                <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
                             </div>
                         </li>
                         <li>
@@ -275,7 +248,7 @@
                             </div>
                             <div class="footer-contact-text">
                                 <h5>Address</h5>
-                                <p><strong>Head Office:</strong> 160C/20, Kurinji Nagar, 5th street, Tuticorin - 628002<br><strong>Branch Office:</strong> YMCA Building, Variety Hall Road, Coimbatore - 641001</p>
+                                <p>Your Office Address<br>City, State, ZIP Code</p>
                             </div>
                         </li>
                     </ul>
