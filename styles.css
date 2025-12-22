@@ -447,6 +447,42 @@ a {
     overflow-wrap: break-word;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        align-items: flex-end;
+        padding-top: 90px;
+        padding-bottom: var(--spacing-lg);
+        background-position: 70% center;
+    }
+    
+    .hero .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+        align-items: flex-end;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .hero-line-1,
+    .hero-line-2,
+    .hero-line-3 {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 80vh;
+        padding-top: 80px;
+        padding-bottom: var(--spacing-md);
+        background-position: 65% center;
+    }
+}
+
 .hero-cta {
     display: flex;
     gap: var(--spacing-sm);
