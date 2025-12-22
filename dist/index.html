@@ -28,17 +28,36 @@
     }
     </script>
     <title>OPAL - Media Production & Digital Marketing Agency</title>
+    <style>
+        /* Emergency visibility fix */
+        * {
+            visibility: visible !important;
+        }
+        body {
+            background: #000000 !important;
+            color: #ffffff !important;
+        }
+        .navbar, .hero, section {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Font loading fallback */
+        @font-face {
+            font-family: 'Inter';
+            font-display: swap;
+        }
+    </style>
 </head>
-<body>
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress"></div>
-
+<body style="background: #000000 !important; color: #ffffff !important; opacity: 1 !important; visibility: visible !important;">
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" style="background: #000000 !important; color: #ffffff !important; display: block !important; opacity: 1 !important; visibility: visible !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 1000 !important; padding: 1rem !important;">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="#home" class="logo-image" onclick="event.preventDefault(); document.getElementById('home').scrollIntoView({behavior: 'smooth', block: 'start'});">
@@ -49,7 +68,7 @@
                         <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="#contact" class="btn-nav">Contact</a></li>
+                        <li><a href="#contact" class="btn-nav" onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'});" style="color: #000000 !important; background: #ffffff !important; font-weight: 500 !important;">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,14 +76,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0) 85%),
+        url('Gemini_Generated_Image_rf2gklrf2gklrf2g.png') right center / cover no-repeat,
+        #000000 !important; color: #ffffff !important; display: flex !important; min-height: 100vh !important; opacity: 1 !important; visibility: visible !important; position: relative !important; background-repeat: no-repeat !important; background-size: cover !important; background-position: right center !important;">
         <div class="hero-background-pattern">
             <div class="hero-grid-pattern"></div>
             <div class="hero-radial-gradient"></div>
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">
+                <h1 class="hero-title" style="color: #ffffff !important; font-size: 4rem !important; font-weight: 600 !important; opacity: 1 !important; visibility: visible !important;">
                     <span class="hero-line-1">We Create.</span>
                     <span class="hero-line-2">We Capture.</span>
                     <span class="hero-line-3">We Inspire.</span>
@@ -290,69 +312,83 @@
         </div>
     </section>
 
-    <!-- Stories We've Told With -->
-    <section class="clients-section">
+    <!-- Achievements Section -->
+    <section class="achievements-section">
         <div class="container">
-            <h2 class="section-title">STORIES WE'VE TOLD WITH</h2>
-            <div class="clients-scroll-container">
-                <div class="clients-scroll-wrapper">
-                    <div class="clients-scroll">
-                        <div class="client-logo">
-                            <img src="Toyota-logo-icon-on-transparent--PNG-removebg-preview.png" alt="Toyota" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Toyota</div>
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-number">
+                        <span class="number" data-target="100">0</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <p class="achievement-text">Completed Projects</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">
+                        <span class="number" data-target="50">0</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <p class="achievement-text">Ongoing Clients</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">
+                        <span class="number" data-target="20">0</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <p class="achievement-text">Skilled Experts</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">
+                        <span class="number" data-target="100">0</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <p class="achievement-text">Satisfied Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="client-logos-3d">
+        <div class="container">
+            <h2 class="section-title">Our Clients</h2>
+            <div class="client-carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-3d">
+                        <div class="carousel-item" style="--i:0;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="image_2025-12-17_121703617-removebg-preview.png" alt="BMW">
+                                </div>
+                            </div>
                         </div>
-                        <div class="client-logo">
-                            <img src="366-3666957_škoda-logo-skoda-logo-removebg-preview.png" alt="Škoda" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Škoda</div>
+                        <div class="carousel-item" style="--i:1;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="LandRover.svg-removebg-preview.png" alt="Range Rover">
+                                </div>
+                            </div>
                         </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_120701437-removebg-preview.png" alt="Cars Catalyst" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Cars Catalyst</div>
+                        <div class="carousel-item" style="--i:2;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="366-3666957_škoda-logo-skoda-logo-removebg-preview.png" alt="Škoda">
+                                </div>
+                            </div>
                         </div>
-                        <div class="client-logo">
-                            <img src="LandRover.svg-removebg-preview.png" alt="Land Rover Range Rover" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Land Rover<br>Range Rover</div>
+                        <div class="carousel-item" style="--i:3;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="Toyota-logo-icon-on-transparent--PNG-removebg-preview.png" alt="Toyota">
+                                </div>
+                            </div>
                         </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_121320864-removebg-preview.png" alt="JAP Jshya Apparels" onerror="this.style.display='none';">
-                            <div class="client-logo-name">JAP<br>Jshya Apparels</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_121433090-removebg-preview.png" alt="London Castle" onerror="this.style.display='none';">
-                            <div class="client-logo-name">London Castle</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_121703617-removebg-preview.png" alt="BMW" onerror="this.style.display='none';">
-                            <div class="client-logo-name">BMW</div>
-                        </div>
-                        <!-- Duplicate for seamless scroll -->
-                        <div class="client-logo">
-                            <img src="Toyota-logo-icon-on-transparent--PNG-removebg-preview.png" alt="Toyota" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Toyota</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="366-3666957_škoda-logo-skoda-logo-removebg-preview.png" alt="Škoda" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Škoda</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_120701437-removebg-preview.png" alt="Cars Catalyst" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Cars Catalyst</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="LandRover.svg-removebg-preview.png" alt="Land Rover Range Rover" onerror="this.style.display='none';">
-                            <div class="client-logo-name">Land Rover<br>Range Rover</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_121320864-removebg-preview.png" alt="JAP Jshya Apparels" onerror="this.style.display='none';">
-                            <div class="client-logo-name">JAP<br>Jshya Apparels</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_121433090-removebg-preview.png" alt="London Castle" onerror="this.style.display='none';">
-                            <div class="client-logo-name">London Castle</div>
-                        </div>
-                        <div class="client-logo">
-                            <img src="image_2025-12-17_121703617-removebg-preview.png" alt="BMW" onerror="this.style.display='none';">
-                            <div class="client-logo-name">BMW</div>
+                        <div class="carousel-item" style="--i:4;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="image_2025-12-17_121433090-removebg-preview.png" alt="London Castle" class="london-bright">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -461,7 +497,7 @@
             <section id="web-development" class="service-section service-alt">
                 <div class="container">
                     <div class="service-content">
-                        <div class="service-image">
+                        <div class="service-image service-image-tall">
                             <img src="Coding%E2%9D%A4%EF%B8%8F_%F0%9F%94%A5.jpg" alt="We design stunning websites that are fast, responsive, and conversion-focused - Website Development">
                         </div>
                         <div class="service-text">
@@ -581,7 +617,7 @@
                     <span class="get-in-touch-line2">IN TOUCH</span>
                 </h2>
                 <div class="get-in-touch-icons">
-                    <a href="https://www.linkedin.com/company/opal-media-productions/" class="contact-icon-link" aria-label="LinkedIn" target="_blank">
+                    <a href="#" class="contact-icon-link" aria-label="LinkedIn">
                         <div class="contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
@@ -602,13 +638,6 @@
                             </svg>
                         </div>
                     </a>
-                    <a href="https://www.instagram.com/opal_media_productions?igsh=MXI5Y3Iyemw2Ymlweg==" class="contact-icon-link" aria-label="Instagram" target="_blank">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
@@ -620,7 +649,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <a href="#home" class="footer-logo-image" onclick="event.preventDefault(); document.getElementById('home').scrollIntoView({behavior: 'smooth', block: 'start'});">
-                        <img src="logo.png" alt="OPAL Media Productions">
+                        <img src="logo.png" alt="OPAL Media Productions" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 1rem;">
                     </a>
                     <p>We Create. We Capture. We Inspire.</p>
                     <p class="footer-tagline">Full-service media production and digital marketing company helping brands communicate through powerful visuals and effective digital strategies.</p>

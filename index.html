@@ -61,7 +61,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="#home" class="logo-image" onclick="event.preventDefault(); document.getElementById('home').scrollIntoView({behavior: 'smooth', block: 'start'});">
-                    <img src="logo.png" alt="OPAL Media Productions" style="height: 50px; width: auto; object-fit: contain;">
+                    <img src="logo.png" alt="OPAL Media Productions">
                 </a>
                 <div class="nav-right">
                     <ul class="nav-menu">
@@ -76,7 +76,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero" style="background: #000000 !important; color: #ffffff !important; display: flex !important; min-height: 100vh !important; opacity: 1 !important; visibility: visible !important; position: relative !important;">
+    <section id="home" class="hero" style="background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0) 85%),
+        url('Gemini_Generated_Image_rf2gklrf2gklrf2g.png') right center / cover no-repeat,
+        #000000 !important; color: #ffffff !important; display: flex !important; min-height: 100vh !important; opacity: 1 !important; visibility: visible !important; position: relative !important; background-repeat: no-repeat !important; background-size: cover !important; background-position: right center !important;">
         <div class="hero-background-pattern">
             <div class="hero-grid-pattern"></div>
             <div class="hero-radial-gradient"></div>
@@ -346,6 +349,53 @@
         </div>
     </section>
 
+    <section class="client-logos-3d">
+        <div class="container">
+            <h2 class="section-title">Our Clients</h2>
+            <div class="client-carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-3d">
+                        <div class="carousel-item" style="--i:0;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="image_2025-12-17_121703617-removebg-preview.png" alt="BMW">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i:1;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="LandRover.svg-removebg-preview.png" alt="Range Rover">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i:2;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="366-3666957_škoda-logo-skoda-logo-removebg-preview.png" alt="Škoda">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i:3;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="Toyota-logo-icon-on-transparent--PNG-removebg-preview.png" alt="Toyota">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="--i:4;">
+                            <div class="logo-card">
+                                <div class="logo-visual">
+                                    <img src="image_2025-12-17_121433090-removebg-preview.png" alt="London Castle" class="london-bright">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="services-page">
         <div class="container">
@@ -447,7 +497,7 @@
             <section id="web-development" class="service-section service-alt">
                 <div class="container">
                     <div class="service-content">
-                        <div class="service-image">
+                        <div class="service-image service-image-tall">
                             <img src="Coding%E2%9D%A4%EF%B8%8F_%F0%9F%94%A5.jpg" alt="We design stunning websites that are fast, responsive, and conversion-focused - Website Development">
                         </div>
                         <div class="service-text">

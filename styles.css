@@ -74,6 +74,24 @@ html {
 section {
     scroll-margin-top: 70px;
 }
+
+section {
+    position: relative;
+}
+
+section:not(:first-of-type)::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.25));
+    pointer-events: none;
+    z-index: 5;
+}
 }
 
 body {
@@ -237,6 +255,8 @@ a {
     width: auto;
     object-fit: contain;
     transition: opacity 0.3s ease;
+    transform: scale(1.3);
+    transform-origin: left center;
 }
 
 .logo-image:hover img {
@@ -324,53 +344,30 @@ a {
     min-height: 100vh;
     display: flex !important;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     color: #ffffff !important;
     padding-top: 100px;
     padding-bottom: var(--spacing-xl);
-    background: #000000 !important;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0) 85%),
+        url("Gemini_Generated_Image_rf2gklrf2gklrf2g.png") right center / cover no-repeat,
+        #000000;
     overflow: hidden;
     opacity: 1 !important;
     visibility: visible !important;
 }
 
 .hero-background-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--white);
-    z-index: 0;
+    display: none;
 }
 
 .hero-grid-pattern {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-image: 
-        linear-gradient(to right, rgba(79, 79, 79, 0.18) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(128, 128, 128, 0.04) 1px, transparent 1px);
-    background-size: 14px 24px;
-    z-index: 1;
+    display: none;
 }
 
 .hero-radial-gradient {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -10%;
-    height: 1000px;
-    width: 1000px;
-    border-radius: 50%;
-    background: radial-gradient(circle 400px at 50% 300px, rgba(251, 251, 251, 0.21), transparent);
-    margin: 0 auto;
-    z-index: 1;
+    display: none;
 }
 
 .hero-background {
@@ -383,7 +380,7 @@ a {
 
 .hero-content {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
     padding: var(--spacing-lg) var(--spacing-md);
     position: relative;
     z-index: 2;
@@ -391,6 +388,16 @@ a {
     overflow-wrap: normal;
     opacity: 1;
     visibility: visible;
+    text-align: left;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
 }
 
 .hero-title {
@@ -1055,6 +1062,180 @@ section {
     border-left-color: rgba(255, 255, 255, 0.5);
 }
 
+.client-logos-3d {
+    background: #000000;
+    padding: calc(var(--spacing-xl) + 2rem) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-logos-3d .section-title {
+    text-align: center;
+    margin-bottom: calc(var(--spacing-xl) + 0.5rem);
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.client-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    perspective: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-3d {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: carousel-spin 18s linear infinite;
+}
+
+.carousel-item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(380px);
+}
+
+.logo-card {
+    width: 220px;
+    height: 130px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s ease, box-shadow 0.6s ease, border-color 0.6s ease;
+}
+
+.logo-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.logo-visual {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.logo-visual img {
+    max-height: 80px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+}
+
+.logo-visual img.london-bright {
+    filter: brightness(1.55) contrast(1.2) drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+}
+
+.logo-visual span {
+    display: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.logo-visual.text-only {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+    border-radius: 14px;
+}
+
+.logo-visual.text-only img {
+    display: none;
+}
+
+.logo-visual.text-only span {
+    display: block;
+}
+
+@keyframes carousel-spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-3d {
+        height: 220px;
+    }
+    
+    .carousel-item {
+        transform: rotateY(calc(var(--i) * 72deg)) translateZ(300px);
+    }
+    
+    .logo-card {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        perspective: 900px;
+    }
+    
+    .carousel-3d {
+        height: 200px;
+    }
+    
+    .carousel-item {
+        transform: rotateY(calc(var(--i) * 72deg)) translateZ(240px);
+    }
+    
+    .logo-card {
+        width: 180px;
+        height: 110px;
+    }
+    
+    .logo-visual img {
+        max-height: 64px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-3d {
+        height: 180px;
+    }
+    
+    .carousel-item {
+        transform: rotateY(calc(var(--i) * 72deg)) translateZ(200px);
+    }
+    
+    .logo-card {
+        width: 160px;
+        height: 100px;
+    }
+    
+    .logo-visual span {
+        font-size: 1.15rem;
+    }
+}
+
 .feature-item h3 {
     color: #ffffff;
     font-size: 1.125rem;
@@ -1256,7 +1437,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
-    align-items: center;
+    align-items: stretch;
 }
 
 .service-label {
@@ -1324,7 +1505,8 @@ section {
 }
 
 .service-image {
-    height: 400px;
+    height: 100%;
+    min-height: 400px;
     border-radius: 0;
     overflow: hidden;
     background: var(--light-gray);
@@ -1340,6 +1522,18 @@ section {
     object-fit: cover;
     display: block;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-image-tall {
+    height: 100%;
+    min-height: 520px;
+}
+
+@media (max-width: 768px) {
+    .service-image-tall {
+        height: 100%;
+        min-height: 420px;
+    }
 }
 
 .service-image:hover img {
