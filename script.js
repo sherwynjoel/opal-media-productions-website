@@ -58,6 +58,184 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Generate floating glyph particles (+ / o) in the "Let's Get In Touch" section
+document.addEventListener('DOMContentLoaded', function() {
+    const layer = document.querySelector('.get-in-touch .floating-glyphs');
+    if (!layer) return;
+
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Clear any server-rendered fallback
+    layer.innerHTML = '';
+
+    const isSmall = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    // Still render particles when reduced motion is enabled; CSS will disable animation.
+    const count = isSmall ? 28 : 46;
+    const glyphs = ['+', 'o'];
+
+    for (let i = 0; i < count; i++) {
+        const el = document.createElement('span');
+        el.className = 'glyph';
+        el.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+
+        // keep particles away from the exact center title area a bit
+        // by choosing x/y from bands instead of full random
+        const xBands = [10, 22, 34, 66, 78, 90];
+        const yBands = [12, 22, 32, 58, 70, 82];
+        const x = xBands[Math.floor(Math.random() * xBands.length)] + (Math.random() * 8 - 4);
+        const y = yBands[Math.floor(Math.random() * yBands.length)] + (Math.random() * 8 - 4);
+
+        const size = 18 + Math.random() * (isSmall ? 10 : 14); // 18–28/32px
+        const opacity = 0.28 + Math.random() * 0.42; // 0.28–0.7
+        const dx = (Math.random() * 2 - 1) * (isSmall ? 18 : 28); // px
+        const dy = (Math.random() * 2 - 1) * (isSmall ? 18 : 30); // px
+        const dur = 8 + Math.random() * 10; // 8–18s
+        const delay = -(Math.random() * 10); // negative start offset
+        const tw = 2.4 + Math.random() * 3.6; // 2.4–6s
+        const twd = -(Math.random() * 6);
+        const r0 = Math.floor(Math.random() * 360);
+
+        const color = 'rgba(255, 255, 255, 0.6)';
+
+        el.style.left = `${x}%`;
+        el.style.top = `${y}%`;
+        el.style.setProperty('--size', `${size.toFixed(1)}px`);
+        el.style.setProperty('--o', opacity.toFixed(2));
+        el.style.setProperty('--dx', `${dx.toFixed(1)}px`);
+        el.style.setProperty('--dy', `${dy.toFixed(1)}px`);
+        el.style.setProperty('--dur', `${dur.toFixed(2)}s`);
+        el.style.setProperty('--delay', `${delay.toFixed(2)}s`);
+        el.style.setProperty('--tw', `${tw.toFixed(2)}s`);
+        el.style.setProperty('--twd', `${twd.toFixed(2)}s`);
+        el.style.setProperty('--r0', `${r0}deg`);
+        el.style.setProperty('--c', color);
+
+        if (prefersReducedMotion) {
+            el.style.animation = 'none';
+            el.style.opacity = '0.35';
+        }
+
+        layer.appendChild(el);
+    }
+});
+
+// Generate floating particles and geometric shapes in the Hero section
+document.addEventListener('DOMContentLoaded', function() {
+    const heroParticleLayer = document.querySelector('.hero .hero-radial-gradient');
+    if (!heroParticleLayer) return;
+
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isSmall = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    const particleCount = isSmall ? 20 : 35;
+    const glyphs = ['+', 'o', '·', '×', '◇'];
+
+    // Create text particles
+    for (let i = 0; i < particleCount; i++) {
+        const el = document.createElement('span');
+        el.className = 'glyph';
+        el.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+
+        // Distribute particles across the hero section
+        const x = 5 + Math.random() * 90;
+        const y = 10 + Math.random() * 80;
+
+        const size = 14 + Math.random() * 16;
+        const opacity = 0.2 + Math.random() * 0.4;
+        const dx = (Math.random() * 2 - 1) * 30;
+        const dy = (Math.random() * 2 - 1) * 30;
+        const dur = 10 + Math.random() * 15;
+        const delay = -(Math.random() * 15);
+        const tw = 3 + Math.random() * 5;
+        const twd = -(Math.random() * 6);
+        const r0 = Math.floor(Math.random() * 360);
+
+        const color = 'rgba(255, 255, 255, 0.5)';
+
+        el.style.left = `${x}%`;
+        el.style.top = `${y}%`;
+        el.style.setProperty('--size', `${size.toFixed(1)}px`);
+        el.style.setProperty('--o', opacity.toFixed(2));
+        el.style.setProperty('--dx', `${dx.toFixed(1)}px`);
+        el.style.setProperty('--dy', `${dy.toFixed(1)}px`);
+        el.style.setProperty('--dur', `${dur.toFixed(2)}s`);
+        el.style.setProperty('--delay', `${delay.toFixed(2)}s`);
+        el.style.setProperty('--tw', `${tw.toFixed(2)}s`);
+        el.style.setProperty('--twd', `${twd.toFixed(2)}s`);
+        el.style.setProperty('--r0', `${r0}deg`);
+        el.style.setProperty('--c', color);
+
+        if (prefersReducedMotion) {
+            el.style.animation = 'none';
+            el.style.opacity = '0.25';
+        }
+
+        heroParticleLayer.appendChild(el);
+    }
+
+    // Create geometric shapes (circles and squares)
+    const shapeCount = isSmall ? 8 : 12;
+    for (let i = 0; i < shapeCount; i++) {
+        const shape = document.createElement('div');
+        shape.className = 'hero-shape';
+
+        const isCircle = Math.random() > 0.5;
+        if (isCircle) {
+            shape.classList.add('hero-shape-circle');
+        } else {
+            shape.classList.add('hero-shape-square');
+        }
+
+        const x = 5 + Math.random() * 90;
+        const y = 10 + Math.random() * 80;
+        const size = 20 + Math.random() * 40;
+        const opacity = 0.05 + Math.random() * 0.15;
+        const dur = 15 + Math.random() * 20;
+        const delay = -(Math.random() * 20);
+
+        shape.style.left = `${x}%`;
+        shape.style.top = `${y}%`;
+        shape.style.width = `${size}px`;
+        shape.style.height = `${size}px`;
+        shape.style.opacity = opacity;
+        shape.style.animationDuration = `${dur}s`;
+        shape.style.animationDelay = `${delay}s`;
+
+        if (prefersReducedMotion) {
+            shape.style.animation = 'none';
+            shape.style.opacity = '0.05';
+        }
+
+        heroParticleLayer.appendChild(shape);
+    }
+
+    // Create pulsing dots
+    const dotCount = isSmall ? 5 : 10;
+    for (let i = 0; i < dotCount; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'hero-dot';
+
+        const x = 10 + Math.random() * 80;
+        const y = 15 + Math.random() * 70;
+        const size = 3 + Math.random() * 5;
+        const dur = 2 + Math.random() * 4;
+        const delay = -(Math.random() * 6);
+
+        dot.style.left = `${x}%`;
+        dot.style.top = `${y}%`;
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.animationDuration = `${dur}s`;
+        dot.style.animationDelay = `${delay}s`;
+
+        if (prefersReducedMotion) {
+            dot.style.animation = 'none';
+            dot.style.opacity = '0.3';
+        }
+
+        heroParticleLayer.appendChild(dot);
+    }
+});
+
 // Enhanced Navbar Scroll Effect with Smooth Transition
 let lastScroll = 0;
 let ticking = false;
@@ -319,6 +497,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
             
             // Get form values
             const name = document.getElementById('name').value.trim();
@@ -326,10 +510,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = document.getElementById('phone').value.trim();
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
+            const honeypotEl = contactForm.querySelector('input[name="website"]');
+            const website = honeypotEl ? (honeypotEl.value || '') : '';
             
             // Basic validation
             if (!name || !email || !service || !message) {
                 alert('Please fill in all required fields.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                }
                 return;
             }
             
@@ -337,43 +527,54 @@ document.addEventListener('DOMContentLoaded', function() {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert('Please enter a valid email address.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                }
                 return;
             }
             
-            // Form submission (you can integrate with your backend here)
-            // For now, we'll just show a success message
             const formData = {
                 name: name,
                 email: email,
                 phone: phone,
                 service: service,
-                message: message
+                message: message,
+                website: website
             };
             
-            console.log('Form submitted:', formData);
-            
-            // Show success message
-            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-            
-            // Reset form
-            contactForm.reset();
-            
-            // In a real application, you would send this data to your server:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(formData)
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-            //     contactForm.reset();
-            // })
-            // .catch(error => {
-            //     alert('Sorry, there was an error sending your message. Please try again.');
-            // });
+            // Send to Hostinger PHP handler (works after upload).
+            // Note: this won't work on the local python server (no PHP).
+            fetch(contactForm.getAttribute('action') || 'contact-submit.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(async (response) => {
+                const data = await response.json().catch(() => ({}));
+                if (!response.ok || !data.ok) {
+                    const msg = (data && data.error) ? data.error : 'Sorry, there was an error sending your message.';
+                    throw new Error(msg);
+                }
+                alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                contactForm.reset();
+            })
+            .catch((err) => {
+                // Fallback: allow normal form submit (non-AJAX) if fetch fails
+                // This will work on Hostinger even if JS fetch is blocked.
+                console.warn('Contact submit failed, falling back to form post:', err);
+                try {
+                    contactForm.submit();
+                } catch (_) {
+                    alert('Sorry, there was an error sending your message. Please try again.');
+                }
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                }
+            });
         });
     }
 });

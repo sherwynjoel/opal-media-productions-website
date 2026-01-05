@@ -66,7 +66,7 @@
                             <div class="contact-icon"></div>
                             <div class="contact-text">
                                 <h3>Address</h3>
-                                <p><strong>Head Office:</strong><br>160C/20, Kurinji Nagar, 5th street, Tuticorin - 628002<br><br><strong>Branch Office:</strong><br>YMCA Building, Variety Hall Road, Coimbatore - 641001</p>
+                                <p><strong>Head Office:</strong><br>160C/20, Kurinji Nagar, 5th street, Tuticorin - 628002<br><br><strong>Branch Office:</strong><br><a href="https://maps.app.goo.gl/LuJ7j2ZwKwefHkv47?g_st=iwb" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(0,0,0,0.3); transition: border-color 0.3s;" onmouseover="this.style.borderColor='rgba(0,0,0,0.8)'" onmouseout="this.style.borderColor='rgba(0,0,0,0.3)'">YMCA Building, Variety Hall Road, Coimbatore - 641001</a></p>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,9 @@
 
                 <div class="contact-form-wrapper">
                     <h2>Send Us a Message</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="contact-submit.php" method="POST" novalidate>
+                        <!-- Honeypot (spam trap) -->
+                        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px; height:0; width:0; opacity:0;" aria-hidden="true">
                         <div class="form-group">
                             <label for="name">Name <span class="required">*</span></label>
                             <input type="text" id="name" name="name" required placeholder="Your full name">
@@ -133,7 +135,7 @@
                     <ul class="footer-contact">
                         <li><a href="tel:+919360867866">+91 93608 67866</a></li>
                         <li><a href="mailto:graham24james@gmail.com">graham24james@gmail.com</a></li>
-                        <li><strong>Head Office:</strong> 160C/20, Kurinji Nagar, 5th street, Tuticorin - 628002<br><strong>Branch Office:</strong> YMCA Building, Variety Hall Road, Coimbatore - 641001</li>
+                        <li><strong>Head Office:</strong> 160C/20, Kurinji Nagar, 5th street, Tuticorin - 628002<br><strong>Branch Office:</strong> <a href="https://maps.app.goo.gl/LuJ7j2ZwKwefHkv47?g_st=iwb" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.3); transition: border-color 0.3s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.8)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'">YMCA Building, Variety Hall Road, Coimbatore - 641001</a></li>
                     </ul>
                 </div>
             </div>
