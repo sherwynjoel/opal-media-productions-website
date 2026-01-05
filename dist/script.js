@@ -250,8 +250,8 @@ function updateNavbar() {
         navbar.classList.remove('scrolled');
     }
     
-    // Keep navbar visible - removed hide/show on scroll
-    navbar.style.transform = 'translateY(0)';
+    // Keep navbar centered - preserve translateX(-50%) for centering
+    navbar.style.transform = 'translateX(-50%)';
     
     // Update active nav link based on scroll position
     const sections = ['home', 'about', 'services', 'portfolio', 'contact'];

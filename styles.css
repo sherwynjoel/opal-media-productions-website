@@ -59,7 +59,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Account for fixed navbar */
+    scroll-padding-top: 100px; /* Account for floating navbar */
     scrollbar-width: thin;
     scrollbar-color: #ffffff #000000;
 }
@@ -193,22 +193,32 @@ a {
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--white);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.4); /* Fallback for browsers without backdrop-filter */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     z-index: 1000;
-    padding: var(--spacing-sm) 0;
-    border-bottom: 1px solid var(--border-gray);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
     visibility: visible;
+    will-change: top, padding, box-shadow, background;
 }
 
 .navbar.scrolled {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 0.75rem 0;
+    top: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 0.875rem 2rem;
+    background: rgba(0, 0, 0, 0.5); /* Fallback */
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-wrapper {
@@ -217,6 +227,9 @@ a {
     align-items: center;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    gap: var(--spacing-md);
+    width: 100%;
+    position: relative;
 }
 
 .nav-wrapper::-webkit-scrollbar {
@@ -248,6 +261,15 @@ a {
     display: flex;
     align-items: center;
     text-decoration: none;
+    outline: none;
+}
+
+.logo-image:focus {
+    outline: none;
+}
+
+.logo-image:active {
+    transform: none;
 }
 
 .logo-image img {
@@ -261,6 +283,10 @@ a {
 
 .logo-image:hover img {
     opacity: 0.8;
+}
+
+.logo-image:active img {
+    transform: scale(1.3);
 }
 
 .footer-logo-image {
@@ -299,42 +325,86 @@ a {
     color: #ffffff !important;
     font-weight: 400;
     font-size: 0.95rem;
-    padding: var(--spacing-xs) 0;
+    padding: 0.5rem 1rem;
     position: relative;
-    transition: var(--transition);
+    transition: background 0.2s ease, color 0.2s ease;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.nav-menu a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-menu a:active {
+    transform: none;
+    outline: none;
 }
 
 .nav-menu a:hover {
-    color: var(--gray);
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: none;
 }
 
 .nav-menu a.active {
-    color: var(--black);
+    color: #ffffff !important;
     font-weight: 500;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: none;
 }
 
 .btn-nav {
-    background: #ffffff !important;
-    color: #000000 !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
     padding: 0.5rem 1.5rem !important;
-    border-radius: 4px;
+    border-radius: 12px;
     font-weight: 500;
     font-size: 0.95rem;
     text-decoration: none !important;
     display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    position: relative;
 }
 
 .nav-menu .btn-nav {
-    color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.btn-nav:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.btn-nav:active {
+    transform: none;
+    outline: none;
 }
 
 .btn-nav:hover {
-    background: #e0e0e0 !important;
-    color: #000000 !important;
+    background: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+    transform: none;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .nav-menu .btn-nav:hover {
-    color: #000000 !important;
+    color: #ffffff !important;
+    transform: none;
 }
 
 
@@ -793,6 +863,7 @@ a {
     font-size: 0.95rem;
     font-family: var(--font-primary);
     transform: translateY(0);
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -804,14 +875,60 @@ a {
 }
 
 .btn-primary {
-    background: var(--black);
-    color: var(--white);
-    border: 1px solid var(--black);
+    background: rgba(173, 216, 230, 0.25);
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.3) 0%, rgba(135, 206, 250, 0.25) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    color: #000000;
+    border: 1px solid rgba(173, 216, 230, 0.4);
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 20px rgba(173, 216, 230, 0.2), 
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-primary:hover {
-    background: var(--dark-gray);
-    border-color: var(--dark-gray);
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.35) 0%, rgba(135, 206, 250, 0.3) 100%);
+    border-color: rgba(173, 216, 230, 0.5);
+    box-shadow: 0 6px 25px rgba(173, 216, 230, 0.3), 
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+                0 10px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(173, 216, 230, 0.25), 
+                0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+                0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 4px 20px rgba(173, 216, 230, 0.2), 
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                0 8px 32px rgba(0, 0, 0, 0.1),
+                0 0 0 3px rgba(173, 216, 230, 0.3);
 }
 
 .btn-secondary {
@@ -826,8 +943,14 @@ a {
 }
 
 .btn-large {
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
+    padding: 1.125rem 3rem;
+    font-size: 1.05rem;
+    border-radius: 50px;
+}
+
+.btn-primary.btn-large {
+    padding: 1.125rem 3rem;
+    font-size: 1.05rem;
 }
 
 /* Sections */
@@ -2650,6 +2773,18 @@ section {
         font-size: 1rem;
     }
     
+    .navbar {
+        top: 15px;
+        width: calc(100% - 30px);
+        padding: 0.875rem 1.25rem;
+        border-radius: 16px;
+    }
+    
+    .navbar.scrolled {
+        top: 10px;
+        padding: 0.75rem 1.25rem;
+    }
+    
     .nav-wrapper {
         flex-wrap: nowrap;
         gap: 0.5rem;
@@ -2671,6 +2806,11 @@ section {
         display: none;
     }
     
+    .logo-image img {
+        height: 40px;
+        transform: scale(1.2);
+    }
+    
     .logo {
         flex-shrink: 0;
         font-size: 1.25rem;
@@ -2679,7 +2819,7 @@ section {
     .nav-menu {
         flex-direction: row;
         flex-wrap: nowrap;
-        gap: 0.5rem;
+        gap: 0.4rem;
         justify-content: flex-end;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -2696,22 +2836,19 @@ section {
         flex-shrink: 0;
     }
     
-    /* Hide About button on mobile */
-    .nav-menu li:nth-child(2) {
-        display: none;
-    }
-    
     .nav-menu a {
         display: block;
-        padding: 0.4rem 0.6rem;
+        padding: 0.4rem 0.75rem;
         font-size: 0.85rem;
         white-space: nowrap;
+        border-radius: 8px;
     }
     
     .btn-nav {
-        padding: 0.4rem 0.8rem !important;
+        padding: 0.4rem 0.9rem !important;
         font-size: 0.85rem !important;
         white-space: nowrap;
+        border-radius: 10px;
     }
     
     .hero-cta {
@@ -2874,6 +3011,47 @@ section {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        top: 10px;
+        width: calc(100% - 20px);
+        padding: 0.75rem 1rem;
+        border-radius: 14px;
+    }
+    
+    .navbar.scrolled {
+        top: 8px;
+        padding: 0.65rem 1rem;
+    }
+    
+    .logo-image img {
+        height: 35px;
+        transform: scale(1.1);
+    }
+    
+    .nav-menu {
+        gap: 0.3rem;
+    }
+    
+    .nav-menu a {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .btn-nav {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .btn-primary {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
+    }
+    
+    .btn-primary.btn-large {
+        padding: 1rem 2.25rem;
+        font-size: 1rem;
+    }
+    
     .container {
         padding: 0 1rem;
     }
@@ -3073,6 +3251,69 @@ section {
     
     .mission-content p {
         font-size: 1rem;
+    }
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #ffffff;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    background: #20BA5A;
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* Responsive WhatsApp button */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
     }
 }
 

@@ -1,0 +1,50 @@
+OPAL MEDIA PRODUCTIONS WEBSITE - PRODUCTION BUILD
+==================================================
+
+Build Date: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+Build Version: 1.0.0
+
+FILES INCLUDED:
+---------------
+✓ index.html          - Main homepage with all features
+✓ styles.css          - Complete stylesheet with liquid glass effects
+✓ script.js           - JavaScript functionality
+✓ contact-submit.php  - PHP contact form handler
+✓ contact.html        - Contact page
+✓ images/             - All image assets (18 files including logo.png)
+
+FEATURES:
+---------
+✓ Liquid glass navbar (centered, translucent)
+✓ Liquid glass "Start Your Project" button
+✓ Floating WhatsApp button (bottom right)
+✓ Fully responsive design (mobile-friendly)
+✓ About button visible on mobile
+✓ Favicon configured (logo.png)
+✓ Contact form with PHP handler
+✓ All latest updates and fixes
+
+DEPLOYMENT:
+-----------
+1. Upload all files from this dist folder to your web server
+2. Ensure PHP is enabled for contact form functionality
+3. Set proper file permissions (644 for files, 755 for directories)
+4. Update email in contact-submit.php if needed
+
+FILE STRUCTURE:
+---------------
+dist/
+├── index.html
+├── contact.html
+├── styles.css
+├── script.js
+├── contact-submit.php
+└── images/
+    ├── logo.png (favicon)
+    └── [17 other image files]
+
+TOTAL FILES: 23
+TOTAL SIZE: ~6.77 MB
+
+READY FOR DEPLOYMENT!
+
